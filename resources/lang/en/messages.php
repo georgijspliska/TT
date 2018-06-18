@@ -37,7 +37,7 @@ return [
     'users' => 'Users',
     'change' => 'Change',
     'approved' => 'Approved',
-    'Not Approved' => 'Not Approved',
+    'not_approved' => 'Not Approved',
     'e_mail' => 'E-Mail Address',
     'password' => 'Password',
     'remember_me' => 'Remember Me',
