@@ -5,12 +5,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Add a new Championship</div>
+                <div class="card-header">@lang('messages.add_new_championship')</div>
                 <div class="card-body">
                     {!! Form::open(['action' => 'ChampController@store', 'files' => true, 'class' => 'form-horizontal']) !!}
 
                     <div class="form-group row">
-                    {!! Form::label('name', 'Championship name', ['class' => 'col-md-4 control-label text-md-right']) !!}
+                    {!! Form::label('name', __('messages.championship_name'), ['class' => 'col-md-4 control-label text-md-right']) !!}
                     <div class="col-md-6">
                     {!! Form::text('name', '', ['class' => 'form-control '.($errors->has('name') ? ' is-invalid' : '' )]) !!}
                     @if ($errors->has('name'))
@@ -21,7 +21,7 @@
                     </div>
                     </div>
                     <div class="form-group row">
-                    {!! Form::label('type', 'Type', ['class' => 'col-md-4 control-label text-md-right']) !!}
+                    {!! Form::label('type', __('messages.type'), ['class' => 'col-md-4 control-label text-md-right']) !!}
                     <div class="col-md-6">
                     {!! Form::text('type', '', ['class' => 'form-control '.($errors->has('name') ? ' is-invalid' : '' )]) !!}
                     @if ($errors->has('type'))
@@ -32,7 +32,7 @@
                     </div>
                     </div>
                     <div class="form-group row">
-                    {!! Form::label('standing', 'Standing', ['class' => 'col-md-4 control-label text-md-right']) !!}
+                    {!! Form::label('standing', __('messages.standing'), ['class' => 'col-md-4 control-label text-md-right']) !!}
                     <div class="col-md-6">
                     {!! Form::textArea('standing', '', ['class' => 'form-control '.($errors->has('description') ? ' is-invalid' : '' )]) !!}
                     @if ($errors->has('standing'))
@@ -43,7 +43,7 @@
                     </div>
                     </div>
                     <div class="form-group row">
-                    {!! Form::label('image', 'Image', ['class' => 'col-md-4 control-label text-md-right']) !!}
+                    {!! Form::label('image', __('messages.image'), ['class' => 'col-md-4 control-label text-md-right']) !!}
                     <div class="col-md-6">
                     {!! Form::file('image', ['class'=>'form-control btn btn-md'.($errors->has('image_small') ? ' is-invalid' : '' )]) !!}
                     @if ($errors->has('image'))
@@ -55,7 +55,7 @@
                     </div>
                     <div class="form-group row">
                     <div class="col-md-6 offset-md-4">
-                    {!! Form::submit('Create', ['class' => 'btn btn-primary']) !!}
+                    {!! Form::submit(__('messages.create'), ['class' => 'btn btn-primary']) !!}
                     </div>
                     </div>
 

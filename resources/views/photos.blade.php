@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-sm">
             <div class="list-group">
-                <div class="list-group-item list-group-item-primary"><h4>Photos</h4></div>
+                <div class="list-group-item list-group-item-primary"><h4>@lang('messages.photos')</h4></div>
 
                 <div class="list-group-item">
                     <div class="card-deck">
@@ -30,7 +30,7 @@
                         </h5>
                         @if ( !Auth::guest() && (Auth::user()->isAdmin() || Auth::user()->isApprove()) )
                         <p class="card-text">
-                            <a class="btn btn-primary btn-sm" href="{{ url('photo', $photo['id']) }}/delete">Delete</a>
+                            <a class="btn btn-primary btn-sm" href="{{ url('photo', $photo['id']) }}/delete">@lang('messages.delete')</a>
                         </p>
                         @endif
 

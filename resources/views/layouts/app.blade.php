@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@lang('messages.title')</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -35,10 +35,12 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                      <li><a class="nav-link" href="/">Races</a></li>
-                      <li><a class="nav-link" href="/champs">Championships</a></li>
-                      <li><a class="nav-link" href="/tracks">Tracks</a></li>
-                      <li><a class="nav-link" href="/photos">Photos</a></li>
+                      <li><a class="nav-link" href="/">@lang('messages.races')</a></li>
+                      <li><a class="nav-link" href="/champs">@lang('messages.championships')</a></li>
+                      <li><a class="nav-link" href="/tracks">@lang('messages.tracks')</a></li>
+                      <li><a class="nav-link" href="/photos">@lang('messages.photos')</a></li>
+                      <li><a class="nav-link" href="/lang/en">EN</a></li>
+                      <li><a class="nav-link" href="/lang/ru">RU</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -46,10 +48,10 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('messages.login') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('messages.register') }}</a>
                             </li>
                         @else
                             <li class="nav-item dropdown">
@@ -59,22 +61,22 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     @if ( !Auth::guest() && Auth::user()->IsAdmin() )
-                                    <a  class="dropdown-item" href="{{ url('track/create') }}">Add new Track</a>
-                                    <a  class="dropdown-item" href="{{ url('race/create') }}">Add new Race</a>
-                                    <a  class="dropdown-item" href="{{ url('champ/create') }}">Add new Championship</a>
-                                    <a  class="dropdown-item" href="{{ url('photo/create') }}">Add new Photo</a>
-                                    <a  class="dropdown-item" href="{{ url('users') }}">Edit Users</a>
+                                    <a  class="dropdown-item" href="{{ url('track/create') }}">@lang('messages.add_new_track')</a>
+                                    <a  class="dropdown-item" href="{{ url('race/create') }}">@lang('messages.add_new_race')</a>
+                                    <a  class="dropdown-item" href="{{ url('champ/create') }}">@lang('messages.add_new_championship')</a>
+                                    <a  class="dropdown-item" href="{{ url('photo/create') }}">@lang('messages.add_new_photo')</a>
+                                    <a  class="dropdown-item" href="{{ url('users') }}">@lang('messages.edit_users')</a>
                                     @endif
                                     @if ( !Auth::guest() && Auth::user()->IsApprove() )
-                                    <a  class="dropdown-item" href="{{ url('track/create') }}">Add new Track</a>
-                                    <a  class="dropdown-item" href="{{ url('race/create') }}">Add new Race</a>
-                                    <a  class="dropdown-item" href="{{ url('champ/create') }}">Add new Championship</a>
-                                    <a  class="dropdown-item" href="{{ url('photo/create') }}">Add new Photo</a>
+                                    <a  class="dropdown-item" href="{{ url('track/create') }}">@lang('messages.add_new_track')</a>
+                                    <a  class="dropdown-item" href="{{ url('race/create') }}">@lang('messages.add_new_race')</a>
+                                    <a  class="dropdown-item" href="{{ url('champ/create') }}">@lang('messages.add_new_championship')</a>
+                                    <a  class="dropdown-item" href="{{ url('photo/create') }}">@lang('messages.add_new_photo')</a>
                                     @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('messages.logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

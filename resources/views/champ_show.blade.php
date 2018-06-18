@@ -6,12 +6,12 @@
             <div class="card">
                 <div class="card-body">
                 <h4 class="card-title">{{ $champ->name }}, {{$champ->type}}</h4>
-                <p class="card-text">Standing: {{ $champ->standing }}</p>
+                <p class="card-text">@lang('messages.standing'): {{ $champ->standing }}</p>
 
 
                 @if ( !Auth::guest() && (Auth::user()->isAdmin() || Auth::user()->isApprove()) )
                 <p class="card-text">
-                    <a class="btn btn-primary btn-sm" href="{{ url('champ', $champ['id']) }}/delete">Delete</a>
+                    <a class="btn btn-primary btn-sm" href="{{ url('champ', $champ['id']) }}/delete">@lang('messages.delete')</a>
                 </p>
                 @endif
                 </div>

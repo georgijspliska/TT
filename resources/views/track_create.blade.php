@@ -5,12 +5,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Add a new Track</div>
+                <div class="card-header">@lang('messages.add_new_track')</div>
                 <div class="card-body">
                     {!! Form::open(['action' => 'TrackController@store', 'files' => true, 'class' => 'form-horizontal']) !!}
 
                     <div class="form-group row">
-                    {!! Form::label('name', 'Name', ['class' => 'col-md-4 control-label text-md-right']) !!}
+                    {!! Form::label('name', __('messages.name'), ['class' => 'col-md-4 control-label text-md-right']) !!}
                     <div class="col-md-6">
                     {!! Form::text('name', '', ['class' => 'form-control '.($errors->has('name') ? ' is-invalid' : '' )]) !!}
                     @if ($errors->has('name'))
@@ -21,7 +21,7 @@
                     </div>
                     </div>
                     <div class="form-group row">
-                    {!! Form::label('type', 'Type', ['class' => 'col-md-4 control-label text-md-right']) !!}
+                    {!! Form::label('type', __('messages.type'), ['class' => 'col-md-4 control-label text-md-right']) !!}
                     <div class="col-md-6">
                     {!! Form::text('type', '', ['class' => 'form-control '.($errors->has('name') ? ' is-invalid' : '' )]) !!}
                     @if ($errors->has('type'))
@@ -32,7 +32,7 @@
                     </div>
                     </div>
                     <div class="form-group row">
-                    {!! Form::label('location', 'Location', ['class' => 'col-md-4 control-label text-md-right']) !!}
+                    {!! Form::label('location', __('messages.location'), ['class' => 'col-md-4 control-label text-md-right']) !!}
                     <div class="col-md-6">
                     {!! Form::text('location', '', ['class' => 'form-control '.($errors->has('name') ? ' is-invalid' : '' )]) !!}
                     @if ($errors->has('location'))
@@ -43,7 +43,7 @@
                     </div>
                     </div>
                     <div class="form-group row">
-                    {!! Form::label('lenght', 'Lenght',['class' => 'col-md-4 control-label text-md-right']) !!}
+                    {!! Form::label('lenght', __('messages.lenght'),['class' => 'col-md-4 control-label text-md-right']) !!}
                     <div class="col-md-6">
                     {!! Form::number('lenght', '', ['class' => 'form-control '.($errors->has('rating') ? ' is-invalid' : '' ), 'step' => '0.1', 'min' => 0, 'max' => 10, 'placeholder' => '0-10']) !!}
                     @if ($errors->has('lenght'))
@@ -54,7 +54,7 @@
                     </div>
                     </div>
                     <div class="form-group row">
-                    {!! Form::label('turns', 'Turns',['class' => 'col-md-4 control-label text-md-right']) !!}
+                    {!! Form::label('turns', __('messages.turns'),['class' => 'col-md-4 control-label text-md-right']) !!}
                     <div class="col-md-6">
                     {!! Form::number('turns', '', ['class' => 'form-control '.($errors->has('rating') ? ' is-invalid' : '' ), 'step' => '0.1', 'min' => 0, 'max' => 10, 'placeholder' => '0-10']) !!}
                     @if ($errors->has('turns'))
@@ -65,7 +65,7 @@
                     </div>
                     </div>
                     <div class="form-group row">
-                    {!! Form::label('record', 'Record', ['class' => 'col-md-4 control-label text-md-right']) !!}
+                    {!! Form::label('record', __('messages.record'), ['class' => 'col-md-4 control-label text-md-right']) !!}
                     <div class="col-md-6">
                     {!! Form::text('record', '', ['class' => 'form-control '.($errors->has('name') ? ' is-invalid' : '' )]) !!}
                     @if ($errors->has('record'))
@@ -76,7 +76,7 @@
                     </div>
                     </div>
                     <div class="form-group row">
-                    {!! Form::label('image', 'Image', ['class' => 'col-md-4 control-label text-md-right']) !!}
+                    {!! Form::label('image', __('messages.image'), ['class' => 'col-md-4 control-label text-md-right']) !!}
                     <div class="col-md-6">
                     {!! Form::file('image', ['class'=>'form-control btn btn-md'.($errors->has('image_small') ? ' is-invalid' : '' )]) !!}
                     @if ($errors->has('image'))
@@ -88,7 +88,7 @@
                     </div>
                     <div class="form-group row">
                     <div class="col-md-6 offset-md-4">
-                    {!! Form::submit('Create', ['class' => 'btn btn-primary']) !!}
+                    {!! Form::submit(__('messages.create'), ['class' => 'btn btn-primary']) !!}
                     </div>
                     </div>
 

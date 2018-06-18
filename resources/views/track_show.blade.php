@@ -7,14 +7,14 @@
                 <div class="card-body">
                 <h4 class="card-title">{{ $track->name }}, {{$track->type}}</h4>
                 <p class="card-text">{{ $track->location }}</p>
-                <p class="card-text">Record: {{ $track->record }}</p>
-                <p class="card-text">Turns: {{ $track->turns }}</p>
-                <p class="card-text">Length: {{ $track->lenght }}</p>
+                <p class="card-text">@lang('messages.record'): {{ $track->record }}</p>
+                <p class="card-text">@lang('messages.turns'): {{ $track->turns }}</p>
+                <p class="card-text">@lang('messages.lenght'): {{ $track->lenght }}</p>
 
 
                 @if ( !Auth::guest() && (Auth::user()->isAdmin() || Auth::user()->isApprove()) )
                 <p class="card-text">
-                    <a class="btn btn-primary btn-sm" href="{{ url('track', $track['id']) }}/delete">Delete</a>
+                    <a class="btn btn-primary btn-sm" href="{{ url('track', $track['id']) }}/delete">@lang('messages.delete')</a>
                 </p>
                 @endif
                 </div>

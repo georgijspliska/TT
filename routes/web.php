@@ -26,6 +26,8 @@ Route::get('/race/{id}/edit', 'RaceController@edit');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('lang/{locale}','LanguageController');
+
 Auth::routes();
 
 

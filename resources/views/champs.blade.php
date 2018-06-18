@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-sm">
             <div class="list-group">
-                <div class="list-group-item list-group-item-primary"><h4>Champs</h4></div>
+                <div class="list-group-item list-group-item-primary"><h4>@lang('messages.championships')</h4></div>
 
                 <div class="list-group-item">
                     <div class="card-deck">

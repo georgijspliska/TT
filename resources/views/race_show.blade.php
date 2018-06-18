@@ -6,14 +6,14 @@
             <div class="card">
                 <div class="card-body">
                 <h4 class="card-title">{{ $race->name }}, {{$race->date}}</h4>
-                <p class="card-text">Track: {{ $race->track->name }}</p>
-                <p class="card-text">Number of partcipants: {{ $race->Nm }}</p>
-                <p class="card-text">Championship: {{ $race->champ->name }}</p>
+                <p class="card-text">@lang('messages.track'): {{ $race->track->name }}</p>
+                <p class="card-text">@lang('messages.nm'): {{ $race->Nm }}</p>
+                <p class="card-text">@lang('messages.championship'): {{ $race->champ->name }}</p>
 
 
                 @if ( !Auth::guest() && (Auth::user()->isAdmin() || Auth::user()->isApprove()) )
                 <p class="card-text">
-                    <a class="btn btn-primary btn-sm" href="{{ url('race', $race['id']) }}/delete">Delete</a>
+                    <a class="btn btn-primary btn-sm" href="{{ url('race', $race['id']) }}/delete">@lang('messages.delete')</a>
                 </p>
                 @endif
                 </div>
