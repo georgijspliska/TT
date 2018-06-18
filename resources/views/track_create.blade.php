@@ -45,7 +45,7 @@
                     <div class="form-group row">
                     {!! Form::label('lenght', __('messages.lenght'),['class' => 'col-md-4 control-label text-md-right']) !!}
                     <div class="col-md-6">
-                    {!! Form::number('lenght', '', ['class' => 'form-control '.($errors->has('rating') ? ' is-invalid' : '' ), 'step' => '0.1', 'min' => 0, 'max' => 10, 'placeholder' => '0-10']) !!}
+                    {!! Form::number('lenght', '', ['class' => 'form-control '.($errors->has('rating') ? ' is-invalid' : '' ), 'step' => '0.1', 'min' => 0, 'max' => 10]) !!}
                     @if ($errors->has('lenght'))
                         <span class="invalid-feedback">
                             <strong>{{ $errors->first('lenght') }}</strong>
@@ -56,7 +56,7 @@
                     <div class="form-group row">
                     {!! Form::label('turns', __('messages.turns'),['class' => 'col-md-4 control-label text-md-right']) !!}
                     <div class="col-md-6">
-                    {!! Form::number('turns', '', ['class' => 'form-control '.($errors->has('rating') ? ' is-invalid' : '' ), 'step' => '0.1', 'min' => 0, 'max' => 10, 'placeholder' => '0-10']) !!}
+                    {!! Form::number('turns', '', ['class' => 'form-control '.($errors->has('rating') ? ' is-invalid' : '' ), 'step' => '0.1', 'min' => 0, 'max' => 20]) !!}
                     @if ($errors->has('turns'))
                         <span class="invalid-feedback">
                             <strong>{{ $errors->first('turns') }}</strong>

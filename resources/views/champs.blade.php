@@ -32,6 +32,10 @@
                         </div>
                     </div>
                     @endforeach
+                    @for ($d=$i; $d < 4;$d++)
+                        <div class="card">
+                        </div>
+                    @endfor
                     </div>
                 </div>
             </div>
